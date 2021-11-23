@@ -27,10 +27,13 @@ export default {
     View,
     Content
   },
-  methods: {
+  setup(){
     // 返回
-    onClickLeft () {
+    function onClickLeft () {
       console.log('返回')
+    }
+    return {
+      onClickLeft
     }
   }
 }
