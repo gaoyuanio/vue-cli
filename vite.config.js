@@ -5,6 +5,7 @@ const { resolve } = require('path')
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",//打包路径
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src') //设置别名src为@
