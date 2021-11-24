@@ -50,7 +50,6 @@ instance.interceptors.request.use((config) => {
 instance.interceptors.response.use((response) => {
     hideLoading()
     //响应成功
-    console.log('拦截器报错');
     return response.data;
 }, (error) => {
     console.log(error)

@@ -13,7 +13,11 @@ export default defineConfig({
   },
   server:{
     proxy:{
-      '/baseUrl':'https://www.baidu.com/'
+      '/api': {
+        target: 'http://rap2api.taobao.org/app/mock/294528',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      },
     }
   },
   build: {

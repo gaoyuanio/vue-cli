@@ -9,7 +9,7 @@ const store = createStore({
   },
   getters: {
     userName: state => {
-      return `获取最新的userName：${state.userName}`
+      return state.userName
     }
   },
   mutations: {

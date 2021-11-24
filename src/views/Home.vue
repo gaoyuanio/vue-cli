@@ -63,7 +63,7 @@
     ActionBarButton,
   } from 'vant';
   import { useStore } from 'vuex'
-  import { mokePost } from '@/http/api';
+  import { getGoods } from '@/http/api';
   import {
     computed,
     onMounted,
@@ -90,29 +90,22 @@
       const store = useStore()
 
       const state = reactive({
-        goods: {
-          title: '美国伽力果（约680g/3个）',
-          price: 2680,
-          express: '免运费',
-          remain: 19,
-          thumb: [
-            'https://img.yzcdn.cn/public_files/2017/10/24/e5a5a02309a41f9f5def56684808d9ae.jpeg',
-            'https://img.yzcdn.cn/public_files/2017/10/24/1791ba14088f9c2be8c610d0a6cc0f93.jpeg',
-          ],
-        },
+        goods: {},
         userName: computed(() => {
           return store.getters.userName
         })
       })
 
 
-
       onMounted(() => {
-        console.log(state.userName)
+        // 获取商品信息
+        let data={
+          "userName": state.userName
+        }
         // 接口调用
-        // mokePost().then(res=>{
-        //   console.log(res)
-        // })
+        getGoods(data).then(res=>{
+          state.goods = res
+        })
       })
 
       function formatPrice() {

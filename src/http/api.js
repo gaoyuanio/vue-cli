@@ -1,30 +1,36 @@
 import axios from "../http/request"
 //请求示例
 //get
-export const mokeGet = (data) => {
+const mokeGet = (data) => {
     return axios({
         url: "/getApi",
         method: "get",
         data,
         config: {
             headers: {
-                'Request-Type': 'wechat'
+                'Request-Type': 'mock'
             },
             timeout: 10000
         }
     })
 }
+
 //post
-export const mokePost = (data) => {
+const getGoods = (data) => {
     return axios({
-        url: "/postApi",
+        url: "/post/goods",
         method: "post",
         data,
         config: {
             headers: {
-                'Request-Type': 'wechat'
+                'Request-Type': 'mock'
             },
             timeout: 10000
         }
     })
+}
+
+export {
+    getGoods,
+    mokeGet
 }

@@ -1,5 +1,7 @@
 {
-  "name": "vite-project",
+  "name": "vue-cli",
+  "author": "gaoyuan",
+  "description": "vue3+vite(纯净版)脚手架",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
