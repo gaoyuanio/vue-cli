@@ -17,33 +17,33 @@
 </template>
 
 <script>
-import {NavBar} from 'vant';
-import View from '@/components/View/index.vue';
-import Content from '@/components/Content/index.vue';
-import {drop} from 'lodash';
-import {onMounted} from '@vue/runtime-core';
+import { NavBar } from 'vant'
+import { drop } from 'lodash'
+import { onMounted } from '@vue/runtime-core'
+import View from '@/components/View/index.vue'
+import Content from '@/components/Content/index.vue'
 
 export default {
   name: 'App',
   components: {
     [NavBar.name]: NavBar,
-    View,
-    Content,
+    [View.name]: View,
+    [Content.name]: Content
   },
-  setup() {
-    onMounted(()=>{
-      console.log('使用lodash===>', drop([1, 2, 3, 4]));
-    });
+  setup () {
+    onMounted(() => {
+      console.log('使用lodash===>', drop([1, 2, 3, 4]))
+    })
 
     // 返回
-    function onClickLeft() {
-      console.log('返回');
+    function onClickLeft () {
+      console.log('返回')
     }
     return {
-      onClickLeft,
-    };
-  },
-};
+      onClickLeft
+    }
+  }
+}
 </script>
 
 <style lang="less">

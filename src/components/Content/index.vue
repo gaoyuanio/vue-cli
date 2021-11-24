@@ -11,20 +11,20 @@ export default {
     scrollX: {
       // 是否开启X轴滚动
       type: Boolean,
-      default: false,
+      default: false
     },
     scrollY: {
       // 是否开启Y轴滚动
       type: Boolean,
-      default: true,
+      default: true
     },
     scrolling: {
       // 是否开启ios惯性滚动。注意：在 ios11 上可能会出现顶部渲染空白填充的问题，这是 ios11 的 bug
       type: Boolean,
-      default: true,
-    },
-  },
-};
+      default: true
+    }
+  }
+}
 </script>
 
 <style lang="less">

@@ -60,16 +60,16 @@ import {
   SwipeItem,
   ActionBar,
   ActionBarIcon,
-  ActionBarButton,
-} from 'vant';
-import {useStore} from 'vuex';
-import {getGoods} from '@/http/api';
+  ActionBarButton
+} from 'vant'
+import { useStore } from 'vuex'
+import { getGoods } from '@/http/api'
 import {
   computed,
   onMounted,
   reactive,
-  toRefs,
-} from '@vue/runtime-core';
+  toRefs
+} from '@vue/runtime-core'
 
 export default {
   name: 'Home',
@@ -83,51 +83,50 @@ export default {
     [SwipeItem.name]: SwipeItem,
     [ActionBar.name]: ActionBar,
     [ActionBarIcon.name]: ActionBarIcon,
-    [ActionBarButton.name]: ActionBarButton,
+    [ActionBarButton.name]: ActionBarButton
   },
-  setup() {
+  setup () {
     // store状态管理
-    const store = useStore();
+    const store = useStore()
 
     const state = reactive({
       goods: {},
       userName: computed(() => {
-        return store.getters.userName;
-      }),
-    });
-
+        return store.getters.userName
+      })
+    })
 
     onMounted(() => {
       // 获取商品信息
-      const data={
-        'userName': state.userName,
-      };
+      const data = {
+        userName: state.userName
+      }
       // 接口调用
-      getGoods(data).then((res)=>{
-        state.goods = res;
-      });
-    });
+      getGoods(data).then((res) => {
+        state.goods = res
+      })
+    })
 
-    function formatPrice() {
-      return '¥' + (state.goods.price / 100).toFixed(2);
+    function formatPrice () {
+      return '¥' + (state.goods.price / 100).toFixed(2)
     }
 
-    function onClickCart() {
-      this.$router.push('cart');
+    function onClickCart () {
+      this.$router.push('cart')
     }
 
-    function sorry() {
-      Toast('暂无后续逻辑~');
+    function sorry () {
+      Toast('暂无后续逻辑~')
     }
 
     return {
       ...toRefs(state),
       formatPrice,
       onClickCart,
-      sorry,
-    };
-  },
-};
+      sorry
+    }
+  }
+}
 </script>
 
 <style lang="less">

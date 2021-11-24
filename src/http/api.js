@@ -1,4 +1,4 @@
-import axios from '../http/request';
+import axios from '../http/request'
 // 请求示例
 // get
 const mokeGet = (data) => {
@@ -8,12 +8,12 @@ const mokeGet = (data) => {
     data,
     config: {
       headers: {
-        'Request-Type': 'mock',
+        'Request-Type': 'mock'
       },
-      timeout: 10000,
-    },
-  });
-};
+      timeout: 10000
+    }
+  })
+}
 
 // post
 const getGoods = (data) => {
@@ -23,14 +23,14 @@ const getGoods = (data) => {
     data,
     config: {
       headers: {
-        'Request-Type': 'mock',
+        'Request-Type': 'mock'
       },
-      timeout: 10000,
-    },
-  });
-};
+      timeout: 10000
+    }
+  })
+}
 
 export {
   getGoods,
-  mokeGet,
-};
+  mokeGet
+}

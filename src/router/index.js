@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
@@ -6,22 +6,22 @@ const routes = [
     path: '/',
     component: () => import('../views/Home.vue'),
     meta: {
-      title: '主页',
-    },
-  },
-];
+      title: '主页'
+    }
+  }
+]
 
 const router = createRouter({
   routes,
-  history: createWebHashHistory(),
-});
+  history: createWebHashHistory()
+})
 
 router.beforeEach((to, from, next) => {
-  const title = to.meta && to.meta.title;
+  const title = to.meta && to.meta.title
   if (title) {
-    document.title = title;
+    document.title = title
   }
-  next();
-});
+  next()
+})
 
-export {router};
+export { router }

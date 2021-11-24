@@ -1,16 +1,16 @@
 // vux状态管理
 import {
-  createStore,
-} from 'vuex';
+  createStore
+} from 'vuex'
 
 const store = createStore({
   state: {
-    userName: 'gaoyuan',
+    userName: 'gaoyuan'
   },
   getters: {
     userName: (state) => {
-      return state.userName;
-    },
+      return state.userName
+    }
   },
   mutations: {
 
@@ -20,7 +20,7 @@ const store = createStore({
   },
   modules: {
 
-  },
-});
+  }
+})
 
-export default store;
+export default store
