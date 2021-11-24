@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import {createRouter, createWebHashHistory} from 'vue-router';
 
 const routes = [
   {
@@ -9,12 +9,12 @@ const routes = [
       title: '主页',
     },
   },
-]
+];
 
 const router = createRouter({
   routes,
-  history:createWebHashHistory()
-})
+  history: createWebHashHistory(),
+});
 
 router.beforeEach((to, from, next) => {
   const title = to.meta && to.meta.title;
@@ -24,4 +24,4 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-export { router };
+export {router};

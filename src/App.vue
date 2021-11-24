@@ -1,5 +1,5 @@
 <template>
-  <div id="app">    
+  <div id="app">
     <div class="mask">
       <!-- 导航 -->
       <van-nav-bar
@@ -17,33 +17,33 @@
 </template>
 
 <script>
-import { NavBar } from 'vant'
-import View from '@/components/View/index.vue'
-import Content from '@/components/Content/index.vue'
-import { drop } from 'lodash'
-import { onMounted } from '@vue/runtime-core'
+import {NavBar} from 'vant';
+import View from '@/components/View/index.vue';
+import Content from '@/components/Content/index.vue';
+import {drop} from 'lodash';
+import {onMounted} from '@vue/runtime-core';
 
 export default {
   name: 'App',
   components: {
     [NavBar.name]: NavBar,
     View,
-    Content
+    Content,
   },
-  setup(){
+  setup() {
     onMounted(()=>{
-      console.log('使用lodash===>',drop([1,2,3,4]))
-    })
+      console.log('使用lodash===>', drop([1, 2, 3, 4]));
+    });
 
     // 返回
-    function onClickLeft () {
-      console.log('返回')
+    function onClickLeft() {
+      console.log('返回');
     }
     return {
-      onClickLeft
-    }
-  }
-}
+      onClickLeft,
+    };
+  },
+};
 </script>
 
 <style lang="less">
@@ -61,5 +61,5 @@ export default {
     flex-wrap: nowrap;
     flex-direction: column;
   }
-  
+
 </style>

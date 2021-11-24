@@ -1,0 +1,28 @@
+env:
+  browser: true
+  es2021: true
+  node: true
+extends:
+  - plugin:vue/essential
+  - google
+parserOptions:
+  ecmaVersion: 2021
+  sourceType: module
+plugins:
+  - vue
+rules: {
+  "require-jsdoc": ["error", {
+        "require": {
+            "FunctionDeclaration": false,
+            "MethodDefinition": false,
+            "ClassDeclaration": false,
+            "ArrowFunctionExpression": false,
+            "FunctionExpression": false
+        }
+    }],
+  new-cap: 0,
+  vue/no-unused-components: 0,
+  no-invalid-this: 0,
+  vue/multi-word-component-names: 0,
+  max-len: 0
+}
