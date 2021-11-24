@@ -9,3 +9,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## mock地址
 
 <http://rap2.taobao.org/repository/joined?user=122569>
+
+## lodash地址
+
+<https://www.lodashjs.com/docs/lodash.drop>

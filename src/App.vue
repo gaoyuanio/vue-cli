@@ -20,6 +20,9 @@
 import { NavBar } from 'vant'
 import View from '@/components/View/index.vue'
 import Content from '@/components/Content/index.vue'
+import { drop } from 'lodash'
+import { onMounted } from '@vue/runtime-core'
+
 export default {
   name: 'App',
   components: {
@@ -28,6 +31,10 @@ export default {
     Content
   },
   setup(){
+    onMounted(()=>{
+      console.log('使用lodash===>',drop([1,2,3,4]))
+    })
+
     // 返回
     function onClickLeft () {
       console.log('返回')

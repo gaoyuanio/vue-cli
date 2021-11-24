@@ -9,6 +9,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.177",
     "vant": "^3.3.0",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12",
